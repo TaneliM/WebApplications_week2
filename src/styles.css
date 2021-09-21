@@ -1,3 +1,11 @@
 body {
-  font-family: sans-serif;
+  font-family: Garamond;
+}
+
+.header {
+  font-style: italic;
+}
+
+menu-table {
+  text-align: left;
 }
