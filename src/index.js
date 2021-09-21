@@ -13,18 +13,25 @@ function initializeCode() {
   const removeCommentsButton = document.getElementById("remove-comments");
 
   addCommentButton.addEventListener("click", function () {
-    var commentsList = document.getElementById("comments");
+    var comments = document.getElementById("comments");
     var comment = document.createElement("div");
     comment.className = "comment";
 
-    comment.appendChild(
-      document.createTextNode(document.getElementById("rating-select").value)
-    ).classNAme = "comment-rating";
+    var rating = document.createElement("p");
+    rating.className = "comment-rating";
+    var commenttext = document.createElement("p");
+    commenttext.className = "comment-text";
+
+    /*comment.appendChild(
+      rating.createTextNode(document.getElementById("rating-select").value)
+    );
 
     comment.appendChild(
-      document.createTextNode(document.getElementById("new-comment").value)
-    ).className = "comment-text";
-    commentsList.appendChild(comment);
+      commenttext.appendChild(
+        document.createTextNode(document.getElementById("new-comment").value)
+      )
+    );
+    comments.appendChild(comment);*/
   });
 
   removeCommentsButton.addEventListener("click", function () {
