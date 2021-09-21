@@ -22,8 +22,14 @@ function initializeCode() {
     var commenttext = document.createElement("p");
     commenttext.className = "comment-text";
 
-    /*comment.appendChild(
-      rating.createTextNode(document.getElementById("rating-select").value)
+    comment.appendChild(
+      rating.appendChild(
+        document.createTextNode(
+          document.getElementById("rating-select").options[
+            document.getElementById("rating-select").selectedIndex
+          ].text
+        )
+      )
     );
 
     comment.appendChild(
@@ -31,7 +37,7 @@ function initializeCode() {
         document.createTextNode(document.getElementById("new-comment").value)
       )
     );
-    comments.appendChild(comment);*/
+    comments.appendChild(comment);
   });
 
   removeCommentsButton.addEventListener("click", function () {
