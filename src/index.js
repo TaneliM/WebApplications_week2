@@ -10,19 +10,30 @@ if (document.readyState !== "loading") {
 
 function initializeCode() {
   const addCommentButton = document.getElementById("add-comment");
-  const removeCommentsButton = document.getElementById("remove-comments");
+  const editCommentsButton = document.getElementById("remove-comments");
 
   addCommentButton.addEventListener("click", function () {
     var comments = document.getElementById("comments");
     var comment = document.createElement("div");
-    comment.className = "comment";
     var rating = document.createElement("p");
-    rating.className = "comment-rating";
     var commenttext = document.createElement("p");
+
+    comment.className = "comment";
+    rating.className = "comment-rating";
     commenttext.className = "comment-text";
+
+    var removeCommentButton = document.createElement("button");
+    removeCommentButton.textContent = "Remove comment";
+    removeCommentButton.className = "remove-comment";
+    removeCommentButton.style.visibility = "hidden";
 
     comment.appendChild(rating);
     comment.appendChild(commenttext);
+    comment.appendChild(removeCommentButton);
+
+    removeCommentButton.addEventListener("click", function () {
+      removeCommentButton.parentElement.remove();
+    });
 
     rating.appendChild(
       document.createTextNode(
@@ -38,9 +49,11 @@ function initializeCode() {
     comments.appendChild(comment);
   });
 
-  removeCommentsButton.addEventListener("click", function () {
-    if (window.confirm("Do you want to remove all comments?")) {
-      document.getElementById("comments-list").innerHTML = "";
+  editCommentsButton.addEventListener("click", function () {
+    var comments = document.getElementsByClassName("comment");
+
+    for (var i = 0; i < comments.length; i++) {
+      comments[i].children[2].style.visibility = "visible";
     }
   });
 }
