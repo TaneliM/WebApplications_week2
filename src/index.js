@@ -16,26 +16,24 @@ function initializeCode() {
     var comments = document.getElementById("comments");
     var comment = document.createElement("div");
     comment.className = "comment";
-
     var rating = document.createElement("p");
     rating.className = "comment-rating";
     var commenttext = document.createElement("p");
     commenttext.className = "comment-text";
 
-    comment.appendChild(
-      rating.appendChild(
-        document.createTextNode(
-          document.getElementById("rating-select").options[
-            document.getElementById("rating-select").selectedIndex
-          ].text
-        )
+    comment.appendChild(rating);
+    comment.appendChild(commenttext);
+
+    rating.appendChild(
+      document.createTextNode(
+        document.getElementById("rating-select").options[
+          document.getElementById("rating-select").selectedIndex
+        ].text
       )
     );
 
-    comment.appendChild(
-      commenttext.appendChild(
-        document.createTextNode(document.getElementById("new-comment").value)
-      )
+    commenttext.appendChild(
+      document.createTextNode(document.getElementById("new-comment").value)
     );
     comments.appendChild(comment);
   });
