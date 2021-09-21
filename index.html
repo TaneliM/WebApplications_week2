@@ -7,47 +7,55 @@
   </head>
 
   <body>
-    <h1>Hello World!</h1>
+    <div class="menu-layout">
+      <h1>Hello World!</h1>
 
-    <h2 class="header">Menu</h2>
+      <h2 class="header">Menu</h2>
 
-    <table id="menu-table">
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Meal 1</td>
-        <td>1.00€</td>
-      </tr>
-      <tr>
-        <td>Meal 2</td>
-        <td>2.00€</td>
-      </tr>
-      <tr>
-        <td>Meal 3</td>
-        <td>3.00€</td>
-      </tr>
-      <tr>
-        <td>Meal 4</td>
-        <td>4.00€</td>
-      </tr>
-      <tr>
-        <td>Meal 5</td>
-        <td>5.00€</td>
-      </tr>
-    </table>
+      <table id="menu-table">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Meal 1</td>
+          <td>1.00€</td>
+        </tr>
+        <tr>
+          <td>Meal 2</td>
+          <td>2.00€</td>
+        </tr>
+        <tr>
+          <td>Meal 3</td>
+          <td>3.00€</td>
+        </tr>
+        <tr>
+          <td>Meal 4</td>
+          <td>4.00€</td>
+        </tr>
+        <tr>
+          <td>Meal 5</td>
+          <td>5.00€</td>
+        </tr>
+      </table>
 
-    <h2 class="header">Reviews</h2>
+      <h2 class="header">Reviews</h2>
+      <ul id="comments-list"></ul>
 
-    <ul id="comments-list"></ul>
-    <textarea
-      name="new comment"
-      id="new-comment"
-      cols="30"
-      rows="10"
-    ></textarea>
-    <button id="add-comment">Add comment</button>
-    <button id="remove-comments">Remove comments</button>
+      <select name="rating" id="rating-select">
+        <option value="1">1 stars</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+      </select>
+      <textarea
+        name="new comment"
+        id="new-comment"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <button id="add-comment">Add comment</button>
+      <button id="remove-comments">Remove comments</button>
+    </div>
   </body>
 </html>

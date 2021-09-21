@@ -2,10 +2,27 @@ body {
   font-family: Garamond;
 }
 
+.menu-layout {
+  text-align: center;
+  max-width: 740px;
+  margin: auto;
+}
+
 .header {
   font-style: italic;
 }
 
-menu-table {
+#menu-table {
+  background-color: #f2f2f2;
   text-align: left;
+  width: 100%;
+}
+
+th {
+  background-color: #f0b079;
+  padding: 5px 0px 5px 0px;
+}
+
+tr:nth-child(even) {
+  background-color: gainsboro;
 }
